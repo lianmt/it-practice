@@ -46,7 +46,7 @@ Animal.prototype.species = 'animal'
 function Extend2(Child, Parent) {
   var c = Child.prototype
   var p = Parent.prototype
-  for(var i in p)
+  for(var i in p) {
     c[i] = p[i]
   }
   c.uber = p
