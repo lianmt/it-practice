@@ -52,7 +52,14 @@ function Extend2(Child, Parent) {
   c.uber = p
 }
 
-
+// 再写一遍继承
+function extend(Child, Parent) {
+  var F = function() {}
+  F.prototype = Parent.prototype
+  Child.prototype = new F()
+  Child.prototype.constructor = Child
+  Child.uber = Parent.prototype
+}
 
 
 
