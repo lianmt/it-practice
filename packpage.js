@@ -45,3 +45,9 @@ var cat1 = new Cat('1', '2')
 var cat2 = new Cat('2', '1')
 alert(cat.type) // 猫科动物
 cat1.eat()      // 吃老鼠
+
+// 原型继承
+function Animal() {}
+Animal.prototype.type = '动物'
+var mao = new Animal()
+console.log(mao.type)

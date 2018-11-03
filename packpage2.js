@@ -61,24 +61,11 @@ function extend(Child, Parent) {
   Child.uber = Parent.prototype
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 经典原型继承
+function extend(Child, Parent) {
+  var F = new function() {}
+  F.prototype = Parent.prototype
+  Child.prototype = new F()
+  Child.prototype.constructor = Child
+  Child.uber = Parent.prototype
+}
